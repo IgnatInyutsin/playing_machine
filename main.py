@@ -81,11 +81,7 @@ def play_game():
 
 def init():
     global conn, cursor
-    # подключаем бд
-    conn = sqlite3.connect('players.db')
-    # создаем курсор
-    cursor = conn.cursor()
-
+    
     # накатываем миграции, если их нет
     cursor.execute\
     ("""CREATE TABLE IF NOT EXISTS player(
